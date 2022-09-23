@@ -1,0 +1,480 @@
+/* BASES */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    font-weight: bold;
+    font-size: 20px;
+    font-family: 'Oswald', sans-serif;
+}
+img{
+    user-select: none;
+}
+title{
+    display: none;
+}
+:root{
+    --box-color: #afafaf88;
+    --font-color: #ea7900;
+    --white: #ebe9e5;
+    --font1: 20px;
+
+}
+html{
+    scroll-behavior: smooth; 
+}
+/* PRESENTACIÓN */
+
+body{
+    background-image: url(img/1Defi.png);
+    background-color: rgb(0, 0, 4);
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    flex-direction: column;
+    display: flex;
+}
+header{
+    background-image: url(img/prueba.jpg);
+    background-color: black;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: top left;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+.telon{
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    animation-name: fading; 
+    position: absolute;
+    animation-duration: .75s; 
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: forwards; 
+    filter: opacity(1);
+}
+#header__telon{
+    animation-delay: 2.3s; 
+}
+#header__telon--image{
+    animation-delay: .5s; 
+}
+
+
+#header__image{
+    width: 50%;
+    animation-name: white-shadow; 
+    animation-duration: .5s; 
+    animation-timing-function: linear; 
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-fill-mode: forwards;
+    position: sticky; 
+    top:4%;
+    bottom: 20%;
+    z-index: 0;
+
+}
+
+/* NAV */
+
+nav{
+    height: 80px;
+    background-color: black;
+    width: 100%;
+    justify-content: space-evenly;
+    display: flex;
+    position: sticky;
+    top: 0px;
+    flex-direction: row;
+    z-index: 5;
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+ul{
+    display: flex;
+    flex-direction: row;
+}
+li{
+
+    transition: ease 2s;
+    margin: 10px;
+    display: inline;
+    color: var(--font-color);
+}
+li:hover{
+    transition: 2s;
+    transform: scale(1.2);
+}
+li > a{
+    font-size: 25px;
+}
+#nav__logo{
+    display: flex;
+    flex-direction: row;
+}
+
+#logo__img{
+    height: 40px;
+}
+#logo__img:hover{
+    animation-name: attack; 
+    animation-duration: 1.2s; 
+    animation-timing-function: ease; 
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+}
+#logo__titulo{
+    color: var(--font-color);
+    
+    user-select: none;
+}
+/* MAIN */
+main{
+    width: 95%;
+}
+h2{
+    font-size: 52px;
+    text-justify: center;
+    border-bottom: 4px var(--font-color) solid ;
+    margin-top: 40px;
+}
+
+#ofertas{
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    justify-content: space-evenly;
+    
+    margin: 8px ;
+}
+.ofertas__imagen{
+    width: 25vw;
+    margin-top: 8px ;
+}
+
+/* SLIDERS */
+.seccion{
+    display: flex;
+    flex-direction: column;
+    margin: 10px auto;
+    display: block;
+}
+.titulo{
+    font-size: 48px;
+    text-align: center;
+    border-bottom: 4px var(--white) solid;
+    border-top: 8px var(--white) solid;
+    margin-bottom: 5px;
+}
+.exhibicion{
+    position: relative;
+    text-align: center;
+    border-radius: 5px;
+    display: flex;
+    margin-bottom: 50px;
+}
+.exhibicion--imagen{
+    width: 30vw;
+    height: 30vw;
+    margin: 0 auto;
+    border: 4px solid var(--white);
+}
+
+.exhibicion__logotipos--imagen{
+    box-shadow: inset 0 0 40px 10px #ea7900;
+}
+    
+
+.prev, .next {
+    position: relative;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+    font-size: 32px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    top: 50%;
+    padding: 1em;
+}
+.prev {
+    border-radius:  3px 0 0 3px;
+
+}
+
+.prev:hover, .next:hover {
+    background-color: var(--white);
+    color: black;
+}
+.indumentaria__exhibicion--imagen, .logotipos__exhibicion--imagen, .flyers__exhibicion--imagen{
+    display: none;
+    margin: 0;
+}
+
+/* FOOTER */
+footer{
+    height: 200px;
+    background-color: black;
+    width: 100%;
+    bottom: 0px;
+    flex-direction: column;
+    z-index: 5;
+    display: flex;
+    justify-content: center;
+}
+#footer__contacto{
+display: flex;
+flex-direction: column;
+}
+#footer__contacto--texto{
+color: var(--font-color);
+font-size: 25px;
+}
+#footer__contacto--texto::after{
+    content: "un solo click!";
+}
+#footer__contacto--lista{
+ color: var(--font-color);
+ padding: 4px auto;
+}
+.icon{
+    height: 20px;
+    width: min-content;
+}
+#footer__nosotros--link{
+    color: var(--font-color);
+    font-size: 25px;
+}
+a{
+    display: flex;
+    flex-direction: column;
+    user-select: auto;
+}
+/*ANIMACIONES*/
+@keyframes attack{
+    0%{
+        transform: scale(1);
+    }
+    25%{
+        transform: scale(.8);
+    }
+    50%{
+        transform: scale(1.23);
+    }
+    75%{
+        transform: scale(1.35);
+    }
+    80%{
+        transform: rotateZ(8deg);
+    }
+    85%{
+        transform: rotateZ(-4deg);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+@keyframes white-shadow { 
+    from 
+        { 
+            filter: drop-shadow(0px 0px 0px rgba(0, 0, 0, 0));
+        } 
+    to { 
+        filter: drop-shadow(0px 0px 30px rgba(255, 255, 255, 0.5));
+        }
+}
+@keyframes fading { 
+    from 
+        { 
+            
+        } 
+    to { 
+        filter: opacity(0);
+        display: none;
+        }
+}
+
+/* RESPONSIVE */
+/* RESPONSIVE */
+/* RESPONSIVE */
+
+@media screen and (max-width:960px)  {
+    
+    * {
+        font-size: 15px;
+    }
+    img{
+        user-select: none;
+    }
+    title{
+        display: none;
+    }
+    :root{
+        --box-color: #afafaf88;
+        --font-color: #ea7900;
+        --white: #ebe9e5;
+    }
+    /* RES PRESENTACIÓN */
+
+    header{
+        height: 100vh;
+    }
+    .telon{
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        animation-name: fading; 
+        position: absolute;
+        animation-duration: .5s; 
+        animation-iteration-count: 1;
+        animation-direction: normal;
+        animation-fill-mode: forwards; 
+        filter: opacity(1);
+    }
+    #header__telon{
+        animation-delay: 2s; 
+    }
+    #header__telon--image{
+        animation-delay: .5s; 
+    }
+    
+    
+    #header__image{
+        width: 50%;
+        animation-name: white-shadow; 
+        animation-duration: .5s; 
+        animation-timing-function: linear; 
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-fill-mode: forwards;
+        position: sticky; 
+        top:4%;
+        bottom: 20%;
+        z-index: 0;
+    
+    }
+    
+    /* RES NAV */
+    
+    nav{
+        height: 100px;
+        background-color: black;
+        width: 100%;
+        justify-content: space-evenly;
+        display: flex;
+        position: sticky;
+        top: 0px;
+        flex-direction: column;
+        z-index: 5;
+    }
+    a{
+        color: white;
+        text-decoration: none;
+    }
+    ul{
+        display: flex;
+        flex-direction: row;
+    }
+    #nav__navegacion > ul > li{
+        margin: 10px;
+        display: inline;
+        color: var(--font-color);
+    }
+    li > a{
+        font-size: 18px;
+    }
+    
+    #logo__img{
+        height: 40px;
+    }
+    #logo__titulo{
+        color: var(--font-color);
+        
+        user-select: none;
+    }
+    /* RES MAIN */
+    
+    h2{
+        font-size: 36px;
+        text-align: center;
+    }
+    
+    #ofertas{
+        display: flex;
+        flex-flow: row wrap;
+        width: 100%;
+        justify-content: space-evenly;
+    }
+    .ofertas__imagen{
+        width: 35vw;
+    }
+    /* RES SLIDERS */
+
+    .titulo{
+        font-size: 32px;
+        text-align: center;
+    }
+    .exhibicion{
+        border-radius: 10px;
+        margin-bottom: 40px;
+    
+    }
+    .exhibicion--imagen{
+        width: 40vw;
+        height: 40vw;
+    }
+    /* RES FOOTER */
+    footer{
+        height: 100px;
+    }
+    #footer__contacto{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-aroundx;
+
+    }
+    #footer__contacto--texto{
+    color: var(--font-color);
+    font-size: 16px;
+    }
+    #footer__contacto--lista{
+     padding: 2px auto;
+     display: flex;
+     flex-direction: column;
+     margin: 0;
+     padding-left: 5%;
+    }
+    li{
+        margin: 0;
+    }
+    .icon{
+        height: 16px;
+        width: min-content;
+        margin-right: 2px;
+    }
+    #footer__nosotros--link{
+        color: var(--font-color);
+        font-size: 18px;
+    }
+    a{
+        display: flex;
+        flex-direction: row;
+        user-select: auto;
+    }
+#footer__contacto--texto::after{
+    content: "un toque!";
+}
+}
